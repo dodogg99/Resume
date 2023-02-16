@@ -49,6 +49,7 @@ Sub 不同月份存貨差異比較()
     Dim last_month_file As String, analysis_file As String, last_month As String, this_month As String, department _
      As String, warehouse_name As String, inventory_type As String, inventory_type_name As String, this_month_final_row As String, last_month_final_row As String
     Dim warehouse_address As Range, inventory_address As Range
+    Dim this_month_data_row As Integer, last_month_data_row As Integer
     Dim department_detail_name As Dictionary
     Set department_detail_name = New Dictionary
     '讀取變數名稱裡的工作表名稱
@@ -127,7 +128,6 @@ Sub 不同月份存貨差異比較()
     Range("1:1").AutoFilter
 
     '比較兩個月的差值
-    Dim this_month_data_row As Long, last_month_data_row As Long
     Workbooks(analysis_file).Sheets(department).Activate
     If Not Range("m2") = "" And Not Range("u2") = "" Then
         this_month_data_row = Range("M1").End(xlDown).Row
