@@ -1,10 +1,11 @@
 ## VBA-project
- #### VBA-project為先前在公司進行問題處理時撰寫的VBA程式，因此無法呈現公司資料執行的結果。下列分別針對5個問題進行說明，並列出這些程式主要使用的VBA語法，最後以存貨呆滯分析為範例簡述程式步驟及列出完整程式碼。
+ #### VBA-project為先前在公司進行問題處理時撰寫的VBA程式，因此無法實際執行並呈現結果。下列分別針對5個問題進行說明，並列出這些程式主要使用的VBA語法，最後以存貨呆滯分析為範例簡述程式步驟及列出完整程式碼。
 
 ## 檔案說明
 * ### 刀具使用分析:
   #### 問題 : 從機台更換刀具的數據中找出異常使用狀況
-  #### 方法 : 使用 $\mathbb{\color{red}{樞紐分析表}}$ 分析刀具更換紀錄，從換刀原因、加工產品、刀具類型等不同層面來統計刀具使用次數占刀具壽命的比例。
+  #### 方法 : 使用 $\mathbb{\color{red}{樞紐分析表}}$ 分析刀具更換紀錄，從換刀原因、加工產品、刀具類型等不同層面來統計刀具使用率。
+    - 刀具使用率=刀具使用次數/預估刀具壽命。
   #### 程式減少人力時間 : 30分鐘
 * ### 刀具庫存分析: 
   #### 問題 : 刀具庫存過高，須了解刀具領用狀況以進行改善對策
@@ -17,8 +18,8 @@
   #### 程式減少人力時間 : 30分鐘
   - 引用VBAProject : Microsoft Scripting Runtime
 * ### 存貨呆滯分析:
-  #### 問題 : 分析部門每月提列存貨呆滯金額變動
-  #### 方法 : 將不同月份相同存貨類別、倉庫類別的產品進行比較 $\mathbb{\color{red}{篩選}}$比較，找出異常增加的項目。
+  #### 問題 : 分析部門每月存貨呆滯金額變動
+  #### 方法 : 將不同月份相同存貨類別、倉庫類別的產品進行 $\mathbb{\color{red}{篩選}}$比較，找出異常增加的項目。
   #### 程式減少人力時間 : 30分鐘
   - 引用VBAProject : Microsoft Scripting Runtime
 * ### 績效數據下載及整理:
@@ -28,9 +29,10 @@
   - 引用VBAProject : Selenium Type Library
   - Selenium為控制瀏覽器的程式，需另外下載。
   - 瀏覽器的driver需與瀏覽器版本相同，這個程式使用chromedriver
+  - Microsoft.NET Framework 3.5安裝
 
 ## 使用VBA語法
-  - QueryTable、Calling Sub、Do Until Loop、For Loop、If Else Statement、 FormulaArray、Autofilter、PivotTable、FindElementByXpath
+  - Do Until Loop、For Loop、If Else Statement、 FormulaArray、Autofilter、PivotTable、QueryTable、Calling Sub、FindElementByXpath
 
 ## 存貨呆滯分析範例
 * ### 步驟說明:
